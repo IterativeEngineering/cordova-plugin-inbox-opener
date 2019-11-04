@@ -19,9 +19,7 @@ public class InboxOpener extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        Log.d("app", "execute");
         if ("openInbox".equals(action)) {
-            Log.d("app", "opening inbox");
             Intent intent=Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_EMAIL);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//Min SDK 15
             cordova.getActivity().startActivity(intent);
