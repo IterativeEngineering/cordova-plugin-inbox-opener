@@ -10,6 +10,7 @@ import android.content.Intent;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
+import Log;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -35,8 +36,9 @@ public class InboxOpener extends CordovaPlugin {
     }
 
     public void openInbox() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_APP_EMAIL);
+        Log.d('app', 'opening inbox');
+        Intent intent=Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_EMAIL);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//Min SDK 15
         cordova.getActivity().startActivity(intent);
     }
 }
