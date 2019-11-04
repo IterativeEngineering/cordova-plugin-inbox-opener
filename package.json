@@ -1,9 +1,9 @@
 {
-  "name": "inbox-opener",
+  "name": "iterative.engineering.inbox.opener",
   "version": "0.0.1",
   "description": "A plugin to open e-mail inbox.",
   "cordova": {
-    "id": "inbox-opener",
+    "id": "iterative.engineering.inbox.opener",
     "platforms": [
       "android"
     ]
