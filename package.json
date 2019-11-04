@@ -1,5 +1,5 @@
 {
-  "name": "InboxOpener",
+  "name": "inbox-opener",
   "version": "0.0.1",
   "description": "A plugin to open e-mail inbox.",
   "cordova": {
