@@ -10,7 +10,7 @@ import android.content.Intent;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import Log;
+import android.util.Log;
 
 /**
  * This class echoes a string called from JavaScript.
