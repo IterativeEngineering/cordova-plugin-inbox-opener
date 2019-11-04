@@ -19,6 +19,7 @@ public class InboxOpener extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        Log.d("app", "execute");
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
             this.coolMethod(message, callbackContext);
@@ -28,6 +29,7 @@ public class InboxOpener extends CordovaPlugin {
     }
 
     private void coolMethod(String message, CallbackContext callbackContext) {
+        Log.d("app", "coolMethod");
         if (message != null && message.length() > 0) {
             callbackContext.success(message);
         } else {
@@ -36,7 +38,7 @@ public class InboxOpener extends CordovaPlugin {
     }
 
     public void openInbox() {
-        Log.d('app', 'opening inbox');
+        Log.d("app", "opening inbox");
         Intent intent=Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_EMAIL);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//Min SDK 15
         cordova.getActivity().startActivity(intent);
