@@ -1,0 +1,17 @@
+{
+  "name": "InboxOpener",
+  "version": "0.0.1",
+  "description": "A plugin to open e-mail inbox.",
+  "cordova": {
+    "id": "iterative-engineering-inbox-opener",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Iterative Engineering",
+  "license": "ISC"
+}
